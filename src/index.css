@@ -1,15 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+
 /* ./src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Global */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  width: 100%;
+}
 body {
   margin: 0;
   min-width: 100%;
   min-height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/********** Views ***********/
+
+/* Home */
+#bitMap {
+  width: 1440px;
+  height: 900px;
 }
