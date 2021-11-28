@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     backgroundColor: theme => ({
       'primary': '#0B0D17',
-      'trans': 'rgba(255,255,255,0.04)'
+      'trans': 'rgba(0,72,255,0.04)'
     }),
     extend: {
       colors: {
