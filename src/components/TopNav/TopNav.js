@@ -30,7 +30,7 @@ const TopNav = () => {
                 <div className={`inline h-12 w-12`}>
                 <img src={logo} alt="Logo"/>
                 </div>
-                <div className={`w-80 h-0.5 bg-white opacity-20 bg-white p-2`}></div>
+                <div className={`w-96 h-px  opacity-20 bg-white -ml-2`}></div>
             </div>
             <div className={`flex-auto `}>
                 <div className={`h-full flex justify-evenly items-center bg-trans backdrop-filter backdrop-blur`}>
