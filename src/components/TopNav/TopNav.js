@@ -35,7 +35,7 @@ const TopNav = () => {
             <div className={`flex-auto `}>
                 <div className={`h-full flex justify-evenly items-center bg-trans backdrop-filter backdrop-blur`}>
                     {links.map((l, i) => (
-                        <Link key={l} index={i} link={l}/>
+                        <Link key={l.title} index={i} link={l}/>
                     ))}
                 </div>
             </div>

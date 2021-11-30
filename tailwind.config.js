@@ -10,10 +10,12 @@ module.exports = {
     extend: {
       colors: {
         'white': '#ffffff',
-        
+        'deepBlue': '#0B0D17',
       },
       backgroundImage: theme => ({
         'homeDesk': "url('/src/assets/images/background-home-desktop.jpg')",
+        'tabDesk': "url('/src/assets/images/background-home-tablet.jpg')",
+        'mobDesk': "url('/src/assets/images/background-home-mobile.jpg')",
       }),
       fontFamily: {
         'barlow': ['Barlow Condensed', 'sans-serif'],
