@@ -4,6 +4,10 @@ import { Routes, Route } from 'react-router-dom';
 // Views
 const Home = lazy(() => import('./views/Home'));
 
+// layouts
+const MainLayout = lazy(() => import('./components/layouts/MainLayout'))
+
+
 function App() {
   return (
     <Suspense fallback={
@@ -12,7 +16,7 @@ function App() {
       </div>
     }>
       <Routes>
-        <Route exact path='/' element={<Home/>}/>
+        <Route exact path='/' element={<MainLayout><Home/></MainLayout>}/>
       </Routes>
     </Suspense>
   );
