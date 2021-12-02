@@ -14,8 +14,11 @@ module.exports = {
       },
       backgroundImage: theme => ({
         'homeDesk': "url('/src/assets/images/background-home-desktop.jpg')",
-        'tabDesk': "url('/src/assets/images/background-home-tablet.jpg')",
-        'mobDesk': "url('/src/assets/images/background-home-mobile.jpg')",
+        'homeTab': "url('/src/assets/images/background-home-tablet.jpg')",
+        'homeMob': "url('/src/assets/images/background-home-mobile.jpg')",
+        'destDesk': "url('/src/assets/images/background-destination-desktop.jpg')",
+        'destTab': "url('/src/assets/images/background-destination-tablet.jpg')",
+        'destMob': "url('/src/assets/images/background-destination-mobile.jpg')",
       }),
       fontFamily: {
         'barlow': ['Barlow Condensed', 'sans-serif'],

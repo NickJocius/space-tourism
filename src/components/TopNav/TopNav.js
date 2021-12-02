@@ -1,8 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Link from '../Nav/Link';
 import logo from '../../assets/images/logo.svg';
+import hamburger from '../../assets/images/icon-hamburger.svg'
 
 const TopNav = () => {
+
+    const [expanded, setExpanded] = useState('hidden');
+
+    const handleButton = () => {
+        if (expanded === 'hidden') {
+            setExpanded('');
+        } else {
+            setExpanded('hidden')
+        }     
+    }
     
     const links = [
         {
@@ -32,12 +43,26 @@ const TopNav = () => {
                 </div>
                 <div className={` h-px w-full opacity-20 bg-white -mr-4 pl-6 z-10`}></div>
             </div>
-            <div className={`flex-auto `}>
-                <div className={`h-full flex justify-evenly items-center bg-trans backdrop-filter backdrop-blur`}>
+            <div className={`flex-auto`}>
+                <div className={`h-full md:flex justify-evenly items-center bg-trans backdrop-filter backdrop-blur hidden`}>
                     {links.map((l, i) => (
                         <Link key={l.title} index={i} link={l}/>
                     ))}
                 </div>
+                <div className={`md:hidden flex items-center h-full w-full justify-end`}>
+                <div className={`inline px-2`}>
+                    <button className="outline-none mobile-menu-button " onClick={handleButton}>
+                        <img src={hamburger} alt="Logo"/>
+                    </button>
+                </div>
+            </div>
+            </div>
+            <div className={`absolute w-full h-auto transition-transform duration-1000 ease-in-out ${expanded && 'hidden'} transform translate-y-24 `}>
+                <ul className={`bg-trans backdrop-filter backdrop-blur`}>
+                    {links.map((l, i) => (
+                        <li className={`text-center`}><Link key={l.title} index={i+1} link={l}/></li>
+                    ))}
+                </ul>
             </div>
         </nav>
     );
