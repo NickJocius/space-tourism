@@ -1,5 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
+import planetReducer from '../features/planet/planetSlice';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    planet: planetReducer,
+  },
 })
