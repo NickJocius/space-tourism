@@ -1,18 +1,21 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleExpand } from '../../features/navState/navStateSlice';
 import Link from '../Nav/Link';
 import logo from '../../assets/images/logo.svg';
 import hamburger from '../../assets/images/icon-hamburger.svg'
 
 const TopNav = () => {
 
-    const [expanded, setExpanded] = useState('hidden');
+    const expanded = useSelector((state) => state.navExpand.expanded);
+    const dispatch = useDispatch();
 
     const handleButton = () => {
-        if (expanded === 'hidden') {
-            setExpanded('');
-        } else {
-            setExpanded('hidden')
-        }     
+        dispatch(toggleExpand())
+    }
+
+    const handleClick = () => {
+        dispatch(toggleExpand())
     }
     
     const links = [
@@ -60,7 +63,7 @@ const TopNav = () => {
             <div className={`absolute w-full h-auto transition-transform duration-1000 ease-in-out ${expanded && 'hidden'} transform translate-y-24 `}>
                 <ul className={`bg-trans backdrop-filter backdrop-blur`}>
                     {links.map((l, i) => (
-                        <li className={`text-center`}><Link key={l.title} index={i+1} link={l}/></li>
+                        <li className={`text-center`} onClick={handleClick}><Link key={l.title} index={i+1} link={l}/></li>
                     ))}
                 </ul>
             </div>
