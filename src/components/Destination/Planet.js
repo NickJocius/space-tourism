@@ -10,16 +10,16 @@ const Planet = ({planet}) => {
             <div className={`flex flex-col  w-96 h-full items-center justify-center`}>
                 <h3 className={`text-white text-3xl font-barlow font-thin uppercase tracking-wide mb-4`}><span className={`pr-2 font-bold`}>01</span>Pick Your Destination</h3>
                 {planet === 'moon' && (
-                    <img alt="Planet" src={Moon} className={`mt-6 py-6`}/>     
+                    <img alt="Planet" src={Moon} className={`mt-6 py-6 max-w-sm md:max-w-full`}/>     
                 )}
                 {planet === 'europa' && (
-                    <img alt="Planet" src={Europa} className={`mt-6 py-6`}/> 
+                    <img alt="Planet" src={Europa} className={`mt-6 py-6 max-w-sm md:max-w-full`}/> 
                 )}
                 {planet === 'mars' && (
-                    <img alt="Planet" src={Mars} className={`mt-6 py-6`}/> 
+                    <img alt="Planet" src={Mars} className={`mt-6 py-6 max-w-sm md:max-w-full`}/> 
                 )}
                 {planet === 'titan' && (
-                    <img alt="Planet" src={Titan} className={`mt-6 py-6`}/> 
+                    <img alt="Planet" src={Titan} className={`mt-6 py-6 max-w-sm md:max-w-full`}/> 
                 )}
             </div>
         </div>
